@@ -51,15 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "QuestLog",
-                    "type": "Button",
-                    "id": "fd366667-e253-40d0-b27f-a8c23ff4509e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "b027e9af-a00a-4cc2-95e8-7f51682030c4",
@@ -298,28 +289,6 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cacd05ed-b8b6-463d-912f-9e41a6daf40c",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "QuestLog",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b3b73f97-ab6e-4de1-979b-1a0dc27ce050",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "QuestLog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
