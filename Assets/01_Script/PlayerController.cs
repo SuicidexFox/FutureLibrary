@@ -13,6 +13,7 @@ public class PlayerController: MonoBehaviour
     public PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction runAction;
+    private InputAction jumpAction;
     private InputAction interactAction;
     private InputAction pauseAction;
     
@@ -27,6 +28,13 @@ public class PlayerController: MonoBehaviour
     private float moveSpeed;
     private float minTurnSpeed = 0.2f;
     private float turnSpeed = 5f;
+
+    private float gravityVelocity;
+    private bool isGrounded;
+    private float gravity = -9.81f;
+    private float gravityMulitplier = 2f;
+    private float jumpHeight = 2.4f;
+    
     
     
     ///////////////////////////////////// Start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -39,6 +47,8 @@ public class PlayerController: MonoBehaviour
         moveAction = playerInput.actions.FindAction("Move");
         runAction = playerInput.actions.FindAction("Run");
         
+        ///////////////////////////////////// Jump \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        jumpAction = playerInput.actions.FindAction("Jump");
         
         ///////////////////////////////////// Interact \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         interactAction = playerInput.actions.FindAction("Interact");
@@ -75,7 +85,23 @@ public class PlayerController: MonoBehaviour
         
         ///////////////////////////////////// Gravity \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         if (characterController.enabled == true)
-        { characterController.SimpleMove(new Vector3(velocity.x * moveSpeed, 0, velocity.z * moveSpeed)); }
+        {
+            isGrounded = characterController.isGrounded;
+            float finalGravity = gravity * gravityMulitplier;
+            
+            if (isGrounded && gravityVelocity < 0)
+            { gravityVelocity = -2f;} // Hält den Player am Boden}
+
+            if (jumpAction.triggered && isGrounded)
+            {gravityVelocity = Mathf.Sqrt(jumpHeight * -2f * finalGravity);} //Sprungstärke
+
+            gravityVelocity += finalGravity * Time.deltaTime; //Sprunggeschwindigkeit
+            velocity = new Vector3(velocity.x * moveSpeed, gravityVelocity, velocity.z * moveSpeed); //Bewegungsvektor x,y,z
+
+            characterController.Move(velocity * Time.deltaTime); //Player bewegen
+        }
+        /*if (characterController.enabled == true)
+        { characterController.SimpleMove(new Vector3(velocity.x * moveSpeed, 0, velocity.z * moveSpeed)); }*/
         
         
         ///////////////////////////////////// Animations \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
