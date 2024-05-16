@@ -54,14 +54,7 @@ public class GameManager : MonoBehaviour
 	    if (currentLines == null) { return; }
 	    currentLines._lineEvent.Invoke();
     }
-    
-    
-    ///////////////////////////////////// Interact \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    
-    public List<string> importantItems;
-    
-    //public void DestroyInteractable() { if (playerController.currentInteractable != null) { Destroy(playerController.currentInteractable.gameObject); } } !!!! auf dem Player anlegen !!!!!
-    
+   
     
     
     ///////////////////////////////////// Pause \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -80,6 +73,7 @@ public class GameManager : MonoBehaviour
 	    { 
 		    playerController.DeactivateInput();
 		    EventSystem.current.SetSelectedGameObject(menu.buttonMain.gameObject);
+            RuntimeManager.PlayOneShot("event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-05");
 		    Time.timeScale = 0.0f;
 	    }
 	    else
@@ -89,6 +83,7 @@ public class GameManager : MonoBehaviour
 		    menu.settings.SetActive(false);
 		    menu.sound.SetActive(false);
 		    menu.controls.SetActive(false);
+		    RuntimeManager.PlayOneShot("event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-06");
 		    Time.timeScale = 1.0f;
 	    } 
     }

@@ -435,10 +435,25 @@ PrefabInstance:
       propertyPath: newPosition.z
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7678212059828887623, guid: 7e44272da822565469887abe76c211bd,
+        type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7678212059828887623, guid: 7e44272da822565469887abe76c211bd,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0.7961152
+      objectReference: {fileID: 0}
     - target: {fileID: 8697175955408436884, guid: 7e44272da822565469887abe76c211bd,
         type: 3}
       propertyPath: m_Name
       value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697175955408436884, guid: 7e44272da822565469887abe76c211bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

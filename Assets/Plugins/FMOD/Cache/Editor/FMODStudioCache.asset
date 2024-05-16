@@ -18,6 +18,33 @@ MonoBehaviour:
   lastModified: 638512716608248732
   FileSizes: []
   Exists: 1
+--- !u!114 &-8360945628271677621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-05
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-05
+  Guid:
+    Data1: -1934735553
+    Data2: 1183651821
+    Data3: 1279227523
+    Data4: -1441790868
+  Banks:
+  - {fileID: -1539996650215382201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1448
 --- !u!114 &-6952297161540077476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,11 +94,38 @@ MonoBehaviour:
   - {fileID: -1539996650215382201}
   IsStream: 1
   Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30027
+--- !u!114 &-5225552702998309626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-06
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-06
+  Guid:
+    Data1: 50492422
+    Data2: 1100780694
+    Data3: -1894204263
+    Data4: -1236944116
+  Banks:
+  - {fileID: -1539996650215382201}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1505
 --- !u!114 &-5213061387165032836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +153,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5090593209110316844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-01
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-01
+  Guid:
+    Data1: 1608102833
+    Data2: 1143218250
+    Data3: 870065321
+    Data4: 334140242
+  Banks:
+  - {fileID: -1539996650215382201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1194
 --- !u!114 &-4801136508405507519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +198,33 @@ MonoBehaviour:
   lastModified: 638513154346807453
   FileSizes: []
   Exists: 1
+--- !u!114 &-4494738926370225415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-04
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-04
+  Guid:
+    Data1: -1096864989
+    Data2: 1297147873
+    Data3: 1552851130
+    Data4: 1661835800
+  Banks:
+  - {fileID: -1539996650215382201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1265
 --- !u!114 &-4044771069134047944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +341,7 @@ MonoBehaviour:
   Path: Assets/07_FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638513661955061877
+  lastModified: 638514174325246647
   FileSizes: []
   Exists: 1
 --- !u!114 &-1266827359670852449
@@ -263,6 +371,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-948108321931031832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-02
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-02
+  Guid:
+    Data1: -526262574
+    Data2: 1335744358
+    Data3: -881194571
+    Data4: -1649518330
+  Banks:
+  - {fileID: -1539996650215382201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1403
 --- !u!114 &-285403294692990121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,12 +449,18 @@ MonoBehaviour:
   - {fileID: -2817439411008913488}
   - {fileID: 5930250562069310546}
   - {fileID: 191779102005070289}
+  - {fileID: -5225552702998309626}
+  - {fileID: -4494738926370225415}
+  - {fileID: 1334505444186933227}
+  - {fileID: -8360945628271677621}
+  - {fileID: -5090593209110316844}
+  - {fileID: -948108321931031832}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1539996650215382201}
   StringsBanks:
   - {fileID: 6229330975326000073}
-  cacheTime: 638513661955081882
+  cacheTime: 638514174325256650
   cacheVersion: 131617
 --- !u!114 &191779102005070289
 MonoBehaviour:
@@ -343,11 +484,38 @@ MonoBehaviour:
   - {fileID: -1539996650215382201}
   IsStream: 1
   Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 90111
+--- !u!114 &1334505444186933227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-03
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui-sci-fi-bubble-approve/ui-sci-fi-bubble-approve-03
+  Guid:
+    Data1: 757534001
+    Data2: 1187959988
+    Data3: 72245906
+    Data4: 801766763
+  Banks:
+  - {fileID: -1539996650215382201}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1254
 --- !u!114 &2795409207567740508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,10 +713,10 @@ MonoBehaviour:
   Path: Assets/07_FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638513661955081882
+  lastModified: 638514174325256650
   FileSizes:
   - Name: 
-    Value: 1186
+    Value: 1442
   Exists: 1
 --- !u!114 &7866410210687280059
 MonoBehaviour:
