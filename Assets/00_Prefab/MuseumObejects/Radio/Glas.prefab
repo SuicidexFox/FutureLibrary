@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4645086790476778296}
   - component: {fileID: 5521010173002914005}
   - component: {fileID: 6822085982366372674}
+  - component: {fileID: 2787252247874679252}
   m_Layer: 0
   m_Name: Glas
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6199343516767429495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2243223, y: 0.16813558, z: 1.8450296}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85,6 +86,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2787252247874679252
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199343516767429495}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -362046790695249943, guid: ca27727015ad0b64791a013bbbc897c0, type: 3}
 --- !u!1001 &7890826769382006700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,10 +116,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4645086790476778296}
     m_Modifications:
+    - target: {fileID: 512709651843142461, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.946
+      objectReference: {fileID: 0}
     - target: {fileID: 752012389444752284, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
       propertyPath: m_Name
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 907141684466302740, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5146278025833664392, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
@@ -152,6 +185,26 @@ PrefabInstance:
         type: 3}
       propertyPath: _onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.7347791
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.77017945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.49782574
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.032971084
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5277638524050547537, guid: 1ed9846e29acfd446b16a4f476beeab9, type: 3}

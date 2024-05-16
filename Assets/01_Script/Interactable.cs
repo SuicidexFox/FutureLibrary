@@ -21,11 +21,11 @@ public class Interactable : MonoBehaviour
     public UnityEvent _lineEvent;
     
     /// Billboard
-    public SpriteRenderer billboard;
+    public GameObject billboard;
     private Camera cam;
 
     ///////////////////////////////////// Event \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public void Start() { cam = Camera.main; billboard.enabled = false; }
+    public void Start() { cam = Camera.main; billboard.SetActive(false); }
     
     public void ShowDialog() { GameManager.instance.ShowDialogUI(this); }
 
@@ -34,8 +34,8 @@ public class Interactable : MonoBehaviour
         if (billboard == null) { return; }
         billboard.transform.rotation = cam.transform.rotation;
     }
-    private void OnTriggerEnter(Collider other) { if (other.GetComponent<PlayerController>() == null) { return; } billboard.enabled = true; }
-    private void OnTriggerExit(Collider other) { if (other.GetComponent<PlayerController>() == null) { return; } billboard.enabled = false;}
+    private void OnTriggerEnter(Collider other) { if (other.GetComponent<PlayerController>() == null) { return; } billboard.SetActive(true); }
+    private void OnTriggerExit(Collider other) { if (other.GetComponent<PlayerController>() == null) { return; } billboard.SetActive(false); }
 
 
     public void DestroyBillboard() { GetComponent<Collider>().enabled =false; Destroy(billboard.gameObject); }
