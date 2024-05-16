@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 public class TypewriterEffect : MonoBehaviour
 {
-    public float soundSpeed = 1f;
     public float typingSpeed = 0.05f;
     public TextMeshProUGUI _text;
     public Button _button;

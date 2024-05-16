@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 976461494530230609}
   - component: {fileID: 7373725727794317516}
   - component: {fileID: 6885172508764446191}
+  - component: {fileID: 7027766721093737941}
   m_Layer: 0
   m_Name: StartScreen
   m_TagString: Untagged
@@ -279,6 +280,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7027766721093737941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3593725259112462087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -670316788
+      Data2: 1271739288
+      Data3: -243861081
+      Data4: -187622808
+    Path: event:/SFX/3DSounds/PC_1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.6025387
+  OverrideMaxDistance: 1.5538391
 --- !u!1 &6940105211464232176
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,16 +467,6 @@ PrefabInstance:
       propertyPath: newPosition.z
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 7678212059828887623, guid: 7e44272da822565469887abe76c211bd,
-        type: 3}
-      propertyPath: OverrideAttenuation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7678212059828887623, guid: 7e44272da822565469887abe76c211bd,
-        type: 3}
-      propertyPath: OverrideMinDistance
-      value: 0.7961152
-      objectReference: {fileID: 0}
     - target: {fileID: 8697175955408436884, guid: 7e44272da822565469887abe76c211bd,
         type: 3}
       propertyPath: m_Name
@@ -478,6 +500,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 907141684466302740, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.951
+      objectReference: {fileID: 0}
+    - target: {fileID: 907141684466302740, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.873
       objectReference: {fileID: 0}
     - target: {fileID: 3963484827373153693, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
@@ -549,11 +581,6 @@ PrefabInstance:
       propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 6940105211464232176}
-    - target: {fileID: 3963484827373153693, guid: 1ed9846e29acfd446b16a4f476beeab9,
-        type: 3}
-      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 7622035545246524256}
     - target: {fileID: 3963484827373153693, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
       propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[4].m_Target
@@ -687,7 +714,7 @@ PrefabInstance:
     - target: {fileID: 5146278025833664392, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.891
       objectReference: {fileID: 0}
     - target: {fileID: 5146278025833664392, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
@@ -751,15 +778,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2376520404591362097}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7622035545246524256 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5277638524050547537, guid: 1ed9846e29acfd446b16a4f476beeab9,
-    type: 3}
-  m_PrefabInstance: {fileID: 2376520404591362097}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

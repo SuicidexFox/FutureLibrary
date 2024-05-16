@@ -175,6 +175,7 @@ public class PlayerController: MonoBehaviour
     {
         playerInput.SwitchCurrentActionMap("Player");
         playerCamInputProvider.enabled = true;
+        GameManager.instance.inUI = false;
     }
     
     ///////////////////////////////////// Extras \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

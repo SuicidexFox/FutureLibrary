@@ -14,8 +14,6 @@ public class Menu : MonoBehaviour
 {
     ///////////////////////////////////// Variable \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     
-    public EventInstance musicInstance;
-    public EventReference musicReference;
     public Animator animatorFade;
     public string url;
 
@@ -49,9 +47,6 @@ public class Menu : MonoBehaviour
         SetupSlider(master, "bus:/Master");
         SetupSlider(music, "bus:/Master/Music");
         SetupSlider(effects, "bus:/Master/SFX");
-        ////FMOD
-        musicInstance = RuntimeManager.CreateInstance(musicReference);
-        musicInstance.start();
         
         StartCoroutine(CFade()); 
     }
@@ -126,7 +121,7 @@ public class Menu : MonoBehaviour
 
     /// Play
     public void StartGame() { fade.SetActive(true); animatorFade.Play("FadeOut"); StartCoroutine(CStartGame()); }
-    IEnumerator CStartGame() { yield return new WaitForSeconds(2f); SceneManager.LoadScene("3D 1"); musicInstance.stop(STOP_MODE.IMMEDIATE); }
+    IEnumerator CStartGame() { yield return new WaitForSeconds(2f); SceneManager.LoadScene("3D 1"); }
     /// Credits
     public void OpenWebURL() { Application.OpenURL(url); }
     /// Quit
@@ -147,7 +142,7 @@ public class Menu : MonoBehaviour
         animatorFade.Play("FadeOut"); 
         StartCoroutine(CMainMenu());
     }
-    IEnumerator CMainMenu() { yield return new WaitForSeconds(2); SceneManager.LoadScene("MainMenu"); musicInstance.stop(STOP_MODE.IMMEDIATE); }
+    IEnumerator CMainMenu() { yield return new WaitForSeconds(2); SceneManager.LoadScene("MainMenu"); }
 
    
 }

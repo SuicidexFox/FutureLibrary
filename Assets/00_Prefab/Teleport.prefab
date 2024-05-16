@@ -148,13 +148,13 @@ MonoBehaviour:
       Data4: -1037414698
     Path: event:/SFX/3DSounds/TeleportSound
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1.0252775
   OverrideMaxDistance: 20
