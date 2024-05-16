@@ -51,11 +51,11 @@ MonoBehaviour:
       m_Calls: []
   sound:
     Guid:
-      Data1: 1440223812
-      Data2: 1143483685
-      Data3: -1937470301
-      Data4: -1046695757
-    Path: event:/SFX/Teleports/ui-sci-fi-computer-assessment-02
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   Itemtext: 
   _lineEvent:
     m_PersistentCalls:
@@ -80,10 +80,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.50259507
-  m_Height: 1.5473493
+  m_Radius: 0.6174934
+  m_Height: 2.5207424
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4198616448815755768
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 5032765368118472473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.886, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []

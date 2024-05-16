@@ -46,3 +46,5 @@ public class TypewriterEffect : MonoBehaviour
         _button.Select();
     }
 }
+
+

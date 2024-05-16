@@ -1,48 +1,52 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController: MonoBehaviour
-{
+ {
     ///////////////////////////////////// Variable \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public CinemachineInputProvider playerCamInputProvider;
-    public CinemachineBrain cinemachineBrain;
-    
+    /// Input
     public PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction runAction;
     private InputAction jumpAction;
     private InputAction interactAction;
     private InputAction pauseAction;
-    
+    private InputAction lookAction;
     public CharacterController characterController;
-    public Transform camTransform;
     
-    public Interactable currentInteractable;
-    
-    //Move
+    /// Walk
     private float walkSpeed = 2f;
     private float runSpeed = 4f;
     private float moveSpeed;
     private float minTurnSpeed = 0.2f;
     private float turnSpeed = 5f;
-
+    
+    /// Jump
     private float gravityVelocity;
     private bool isGrounded;
     private float gravity = -9.81f;
     private float gravityMulitplier = 2f;
     private float jumpHeight = 2.4f;
     
+    /// Look
+    public float cameraRotation;
+    public Transform camTransform;
+    public float maxCamRotation;
+    public float minCamRotation;
+    public float cameraSpeed;
+    
+    /// Interact
+    public Interactable currentInteractable;
     
     
     ///////////////////////////////////// Start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public void Start()
     {
-        ///////////////////////////////////// Movement \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        camTransform = Camera.main.transform;
-        
         ///////////////////////////////////// Walk & Run \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         moveAction = playerInput.actions.FindAction("Move");
         runAction = playerInput.actions.FindAction("Run");
@@ -57,10 +61,15 @@ public class PlayerController: MonoBehaviour
         ///////////////////////////////////// Pause \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         playerInput.actions.FindActionMap("Player").FindAction("Pause").performed +=Pause;
         playerInput.actions.FindActionMap("UI").FindAction("Pause").performed += Pause;
+
+        ///////////////////////////////////// Look \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        lookAction = playerInput.actions.FindAction("Look");
     }
     
+    ///////////////////////////////////// Update \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public void Update() 
-    {   ////////////////////////////////// Movement \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    {   
+        ////////////////////////////////// Movement \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         Vector2 input = moveAction.ReadValue<Vector2>();
         float horizontalInput = input.x;
         float verticalInput = input.y;
@@ -76,14 +85,20 @@ public class PlayerController: MonoBehaviour
         Vector3 verticalVelocity = Vector3.ProjectOnPlane(camTransform.forward, Vector3.up).normalized * verticalInput; //hoch,runter
         Vector3 velocity = Vector3.ClampMagnitude(horizontalVelocity + verticalVelocity, 1); //es wird -2/5, 0-9 = 0-1 berechnet
         
-        ///////////////////////////////////// Rotation at Mouse \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        if (velocity.magnitude > minTurnSpeed)
-        {
-            Quaternion rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(velocity), Time.deltaTime * turnSpeed);
-            transform.rotation = rotation; // DeltaTime passt Frames von unterschiedlichen PC`s an 
-        }
         
-        ///////////////////////////////////// Gravity \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        ///////////////////////////////////// Look \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //float mousex = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
+        //float mousey = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+        
+        
+        Vector2 lookInput = lookAction.ReadValue<Vector2>();
+        transform.Rotate(Vector3.up, lookInput.x);
+        
+        cameraRotation = Mathf.Clamp(cameraRotation - lookInput.y, minCamRotation, maxCamRotation);
+        camTransform.localRotation = Quaternion.Euler(cameraRotation, 0,0 );
+        
+        
+        ///////////////////////////////////// Gravity/Jump \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         if (characterController.enabled == true)
         {
             isGrounded = characterController.isGrounded;
@@ -99,36 +114,13 @@ public class PlayerController: MonoBehaviour
             velocity = new Vector3(velocity.x * moveSpeed, gravityVelocity, velocity.z * moveSpeed); //Bewegungsvektor x,y,z
 
             characterController.Move(velocity * Time.deltaTime); //Player bewegen
+
+            
+            ///////////////////////////////////// Footsteps\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+            if (input != Vector2.zero)
+            { if (footstepCoroutine == null) { footstepCoroutine = StartCoroutine(PlayFootsteps()); } }
+            else { if (footstepCoroutine != null) { StopCoroutine(footstepCoroutine); footstepCoroutine = null; } }
         }
-        /*if (characterController.enabled == true)
-        { characterController.SimpleMove(new Vector3(velocity.x * moveSpeed, 0, velocity.z * moveSpeed)); }*/
-        
-        
-        ///////////////////////////////////// Animations \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        float animatonSpeed = velocity.magnitude;
-        if (input == Vector2.zero)
-        { animatonSpeed = 0.0f; }
-        else if (runAction.inProgress) { }
-        
-        /*///////////////////////////////////// QuestLog \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        //Keyboard
-        if (Input.GetKeyDown(KeyCode.Tab))
-        { questLog = true; }
-        // Prüfe, ob die Taste losgelassen wurde
-        if (Input.GetKeyUp(KeyCode.Tab))
-        { questLog = false; GameManager.instance.questLog.ResetCanvasPosition(); }
-        // Bewege das Canvas, wenn die Taste gedrückt wird
-        if (questLog)
-        { GameManager.instance.questLog.MoveCanvas();}
-        //Controller
-        var gamepad = Gamepad.current;
-        if (gamepad != null)
-        {
-            if (gamepad.dpad.right.wasPressedThisFrame) { questLog = true; }
-            if (gamepad.dpad.right.wasReleasedThisFrame)
-            { questLog = false; GameManager.instance.questLog.ResetCanvasPosition(); }
-            if (questLog) { GameManager.instance.questLog.MoveCanvas(); }
-        }*/
     } 
     
     private void OnDisable() //Disable behavior 
@@ -168,17 +160,21 @@ public class PlayerController: MonoBehaviour
     public void DeactivateInput()  //Deaktiviere Alles
     {
         playerInput.SwitchCurrentActionMap("UI");
-        playerCamInputProvider.enabled = false;
         currentInteractable = null;
     }
     public void ActivateInput()
     {
         playerInput.SwitchCurrentActionMap("Player");
-        playerCamInputProvider.enabled = true;
         GameManager.instance.inUI = false;
     }
     
-    ///////////////////////////////////// Extras \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    public void BrainTime(int newBrainTime) { cinemachineBrain.m_DefaultBlend.m_Time = newBrainTime; }
     
+    
+    ///////////////////////////////////// Footsteps \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    public float footstepInterval = 0.5f; 
+    private AudioSource audioSource;
+    Coroutine footstepCoroutine;
+    
+    private IEnumerator PlayFootsteps() { while (true) { PlayFootstep(); yield return new WaitForSeconds(footstepInterval); } }
+    void PlayFootstep() { RuntimeManager.PlayOneShot("event:/SFX/FootSteps/Stone"); }
 }

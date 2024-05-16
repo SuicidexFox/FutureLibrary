@@ -38,6 +38,6 @@ public class Interactable : MonoBehaviour
     private void OnTriggerExit(Collider other) { if (other.GetComponent<PlayerController>() == null) { return; } billboard.SetActive(false); }
 
 
-    public void DestroyBillboard() { GetComponent<Collider>().enabled =false; Destroy(billboard.gameObject); }
+    public void DestroyBillboard() { GetComponent<Collider>().enabled =false; Destroy(billboard); }
     public void Destroy() { Destroy(this); }
 }

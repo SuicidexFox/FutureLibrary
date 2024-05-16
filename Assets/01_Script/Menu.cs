@@ -121,7 +121,7 @@ public class Menu : MonoBehaviour
 
     /// Play
     public void StartGame() { fade.SetActive(true); animatorFade.Play("FadeOut"); StartCoroutine(CStartGame()); }
-    IEnumerator CStartGame() { yield return new WaitForSeconds(2f); SceneManager.LoadScene("3D 1"); }
+    IEnumerator CStartGame() { yield return new WaitForSeconds(2f); SceneManager.LoadScene("3D"); }
     /// Credits
     public void OpenWebURL() { Application.OpenURL(url); }
     /// Quit
