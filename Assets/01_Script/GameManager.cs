@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
 	    playerController.DeactivateInput();
 	    dialogUI.SetActive(true);
+	    buttonDialog.Select();
 	    inUI = true;
 	    RuntimeManager.PlayOneShot(interactable.sound);
 	    textDialog.SetText(interactable.Itemtext);
@@ -50,7 +51,6 @@ public class GameManager : MonoBehaviour
     {
 	    playerController.ActivateInput();
 	    dialogUI.SetActive(false);
-	    buttonDialog.gameObject.SetActive(false);
 	    inUI = false;
 	    if (currentLines == null) { return; }
 	    currentLines._lineEvent.Invoke();

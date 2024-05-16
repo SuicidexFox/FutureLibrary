@@ -8,8 +8,6 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     public GameObject objTransform;
-    //public Vector3 newPosition;
-    //public Vector3 newRotation;
     public GameObject playerController;
 
     
@@ -28,7 +26,7 @@ public class Teleport : MonoBehaviour
         yield return new WaitForSeconds(1);
         playerController.GetComponent<CharacterController>().enabled = false;
         playerController.transform.position = objTransform.transform.position;
-        //playerController.transform.rotation = newRotation;
+        playerController.transform.rotation = objTransform.transform.rotation;
         playerController.GetComponent<CharacterController>().enabled = true;
         StartCoroutine(CFadeIn());
     }
