@@ -32,7 +32,7 @@ public class TypewriterEffect : MonoBehaviour
         {
             currentText = fullText.Substring(0, i);
             _text.text = currentText;
-            RuntimeManager.PlayOneShot("event:/SFX/Typewriter/typewriter 2");
+            RuntimeManager.PlayOneShot("event:/SFX/Typewriter/typewriter");
             yield return new WaitForSeconds(typingSpeed);
         }
     }

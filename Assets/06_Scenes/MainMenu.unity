@@ -448,10 +448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"PlayerInput","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.InputSystem.PlayerInput,
-      Unity.InputSystem, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 7459906588843865133}
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!4 &1025054903
 Transform:
   m_ObjectHideFlags: 0
@@ -989,23 +987,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1393388460}
-    - target: {fileID: 5059854218592978103, guid: 08f475900fe43b348a402db19666a0ea,
-        type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ImageController","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ImageKeyboard","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5059854218592978103, guid: 08f475900fe43b348a402db19666a0ea,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5059854218592978103, guid: 08f475900fe43b348a402db19666a0ea,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[2]
-      value: 
-      objectReference: {fileID: 371547065}
     - target: {fileID: 5581029608302498381, guid: 08f475900fe43b348a402db19666a0ea,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1160,18 +1141,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f475900fe43b348a402db19666a0ea, type: 3}
---- !u!114 &7459906588843865133 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7806158329696539049, guid: 08f475900fe43b348a402db19666a0ea,
-    type: 3}
-  m_PrefabInstance: {fileID: 7459906588843865132}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
