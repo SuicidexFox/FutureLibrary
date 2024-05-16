@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
 	    playerController.ActivateInput();
 	    dialogUI.SetActive(false);
+	    buttonDialog.gameObject.SetActive(false);
 	    inUI = false;
 	    if (currentLines == null) { return; }
 	    currentLines._lineEvent.Invoke();
