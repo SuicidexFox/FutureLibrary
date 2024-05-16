@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class Collectable : MonoBehaviour
       {
          gameState.IncreaseCount();
          collected = true;
+         RuntimeManager.PlayOneShot("event:/SFX/Collect/Collect");
       }
    }
 }
