@@ -20,18 +20,16 @@ public class PlayerController: MonoBehaviour
     public CharacterController characterController;
     
     /// Walk
-    private float walkSpeed = 2f;
-    private float runSpeed = 4f;
+    public float walkSpeed = 2f;
+    public float runSpeed = 4f;
     private float moveSpeed;
-    private float minTurnSpeed = 0.2f;
-    private float turnSpeed = 5f;
     
     /// Jump
     private float gravityVelocity;
     private bool isGrounded;
     private float gravity = -9.81f;
     private float gravityMulitplier = 2f;
-    private float jumpHeight = 2.4f;
+    public float jumpHeight = 2.4f;
     
     /// Look
     public float cameraRotation;

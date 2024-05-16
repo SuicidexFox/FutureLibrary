@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorFade: {fileID: 3933971854182612715}
-  url: https://suicidefoxgame.itch.io/
+  url: https://elmiratum.itch.io/future-library
   main: {fileID: 2718569828594162064}
   settings: {fileID: 8601261662129410346}
   sound: {fileID: 6446592532222310185}

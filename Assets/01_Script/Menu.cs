@@ -61,7 +61,7 @@ public class Menu : MonoBehaviour
 
     ///////////////////////////////////// SoundVolume \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-    private void SetupSlider(Slider slider, string busPath) { RuntimeManager.GetBus(busPath).getVolume(out float _volume); slider.value = 0.5f; }
+    private void SetupSlider(Slider slider, string busPath) { RuntimeManager.GetBus(busPath).getVolume(out float _volume); slider.value = 0.2f; }
     public void SetMasterVolume() { RuntimeManager.GetBus("bus:/Master").setVolume(master.value); }
     public void SetMusicVolume() { RuntimeManager.GetBus("bus:/Master/Music").setVolume(music.value); }
     public void SetSFXVolume() { RuntimeManager.GetBus("bus:/Master/SFX").setVolume(effects.value); }
