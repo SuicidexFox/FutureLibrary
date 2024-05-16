@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1072490310643198033}
   - component: {fileID: 7950691008975809980}
   - component: {fileID: 1989340241912531537}
+  - component: {fileID: 6346862912288463942}
+  - component: {fileID: 623564411819446773}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -26,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789605073070847803}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.23108447, z: -0, w: 0.9729337}
-  m_LocalPosition: {x: 0.07000012, y: 1.1240001, z: -0.089000024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84,6 +86,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6346862912288463942
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789605073070847803}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1890910595786045333, guid: 46bac019b46ec4c48b87ad778cb91fa8, type: 3}
+--- !u!64 &623564411819446773
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789605073070847803}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1890910595786045333, guid: 46bac019b46ec4c48b87ad778cb91fa8, type: 3}
 --- !u!1001 &4199356672097158096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,10 +138,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1072490310643198033}
     m_Modifications:
+    - target: {fileID: 512709651843142461, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.126
+      objectReference: {fileID: 0}
     - target: {fileID: 752012389444752284, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
       propertyPath: m_Name
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 907141684466302740, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5146278025833664392, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
@@ -151,6 +207,31 @@ PrefabInstance:
         type: 3}
       propertyPath: _onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.502322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.0799476
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.03133392
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.5549644
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.115830936
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5277638524050547537, guid: 1ed9846e29acfd446b16a4f476beeab9, type: 3}

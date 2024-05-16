@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4136786249589021839}
   - component: {fileID: 706322183496767461}
   - component: {fileID: 1250518822956245572}
+  - component: {fileID: 4585276062984818283}
   m_Layer: 0
   m_Name: Filmroll
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8054218213431115934}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.23108447, z: -0, w: 0.9729337}
-  m_LocalPosition: {x: 0.07000012, y: 1.1240001, z: -0.089000024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85,6 +86,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4585276062984818283
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054218213431115934}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6163357941915963767, guid: 46bac019b46ec4c48b87ad778cb91fa8, type: 3}
 --- !u!1001 &9159864570411324106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,10 +116,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4136786249589021839}
     m_Modifications:
+    - target: {fileID: 512709651843142461, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
     - target: {fileID: 752012389444752284, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
       propertyPath: m_Name
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 907141684466302740, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5146278025833664392, guid: 1ed9846e29acfd446b16a4f476beeab9,
         type: 3}
@@ -152,6 +185,31 @@ PrefabInstance:
         type: 3}
       propertyPath: _onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Height
+      value: 3.7319062
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.3474813
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.021504402
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.2751893
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348923910285883, guid: 1ed9846e29acfd446b16a4f476beeab9,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.08801532
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5277638524050547537, guid: 1ed9846e29acfd446b16a4f476beeab9, type: 3}
