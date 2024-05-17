@@ -465,6 +465,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1327433294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1327433296}
+  - component: {fileID: 1327433295}
+  m_Layer: 0
+  m_Name: DontDestroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1327433295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327433294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f6a0b8a7a68384299fc6a9d950b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1327433296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327433294}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.89498293, y: 2.7441542, z: 1.2625897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393388458
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,10 +807,10 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1923616854
-      Data2: 1318349099
-      Data3: -172768865
-      Data4: -1058974517
+      Data1: -804447519
+      Data2: 1319422764
+      Data3: -138003807
+      Data4: 1378055638
     Path: event:/Music/MainMenu
   Event: 
   PlayEvent: 1
@@ -841,6 +885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884975636795312160, guid: 08f475900fe43b348a402db19666a0ea,
+        type: 3}
+      propertyPath: url
+      value: https://suicidefoxgame.itch.io/futurelibrary
       objectReference: {fileID: 0}
     - target: {fileID: 1884975636795312160, guid: 08f475900fe43b348a402db19666a0ea,
         type: 3}
@@ -1153,3 +1202,4 @@ SceneRoots:
   - {fileID: 541776889}
   - {fileID: 1396219092}
   - {fileID: 2051131076}
+  - {fileID: 1327433296}
